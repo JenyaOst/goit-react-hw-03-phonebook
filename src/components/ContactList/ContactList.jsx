@@ -1,6 +1,6 @@
-import { Component } from "react";
+import { Component } from 'react';
 import css from './ContactList.module.css';
-import { ContactListItem } from "components/ContactListItem/ContactListItem";
+import { ContactListItem } from 'components/ContactListItem/ContactListItem';
 
 export class ContactList extends Component {
   render() {
@@ -14,9 +14,9 @@ export class ContactList extends Component {
               key={contact.id}
               handleDeleteContact={onDeleteContact}
             />
-          )
+          );
         })}
       </ul>
-    )
+    );
   }
 }

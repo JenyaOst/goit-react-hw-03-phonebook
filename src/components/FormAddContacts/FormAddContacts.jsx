@@ -1,33 +1,33 @@
-import { Component } from "react";
-import { nanoid } from "nanoid";
-import css from './FormAddContacts.module.css'
+import { Component } from 'react';
+import { nanoid } from 'nanoid';
+import css from './FormAddContacts.module.css';
 
 export class FormAddContacts extends Component {
   state = {
     name: '',
-    phone: ''
-  }
+    phone: '',
+  };
 
   handleChange = event => {
     const { name, value } = event.currentTarget;
     this.setState({
       [name]: value,
-    })
-  }
+    });
+  };
 
   handleSubmit = event => {
     event.preventDefault();
     this.props.onSubmit(this.state);
     this.resetForm();
-    console.log(this.state)
-  }
+    console.log(this.state);
+  };
 
   resetForm = () => {
     this.setState({
       name: '',
-      phone: ''
-    })
-  }
+      phone: '',
+    });
+  };
 
   render() {
     return (
@@ -57,8 +57,10 @@ export class FormAddContacts extends Component {
             required
           />
         </label>
-        <button className={css['contact-form-btn']} type="submit">Add contact</button>
+        <button className={css['contact-form-btn']} type="submit">
+          Add contact
+        </button>
       </form>
-    )
+    );
   }
 }

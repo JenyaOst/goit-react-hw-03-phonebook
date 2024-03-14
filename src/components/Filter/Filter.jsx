@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component } from 'react';
 import css from './Filter.module.css';
 
 export class Filter extends Component {
@@ -7,7 +7,9 @@ export class Filter extends Component {
     return (
       <div>
         <label className={css['filter-label']}>
-          <span className={css['filter-label-text']}>Find contacts by name</span>
+          <span className={css['filter-label-text']}>
+            Find contacts by name
+          </span>
           <input
             className={css['filter-input']}
             type="text"
@@ -18,6 +20,6 @@ export class Filter extends Component {
           />
         </label>
       </div>
-    )
+    );
   }
 }
